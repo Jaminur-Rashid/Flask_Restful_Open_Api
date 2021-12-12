@@ -44,14 +44,3 @@ Then you will be redirect to the swagger uI, and you can test the api from there
 # NOTE
 As we have declared  database columns using varchar sorting of data is done by using string comparison.
 To sort data by number comparison we only have to declare our ("Bedroom) columns as INT.
-
-
-##### Database Table Structure
-| ID             | Location       | Hotel_Name | Sleeping  | Bedroom | Bathroom | Price |
-|----------------|----------------|------------|-----------|---------|----------|-------|
-| uhg87-888-a7.  | Usa-Maryland   | Hotel One  | 10        | 3       | 2        | $60   |
-| uhg87-888-a8.  | Usa-Maryland   | Hotel Two  | 6         | 2       | 3        | $127  |
-| uhg87-888-a9.  | Usa-Maryland   | Hotel Three | 8         | 2       | 4        | $109  |
-| uhg87-888-a10. | Usa-Maryland   | Hotel Four | 7         | 1       | 2        | $92   |
-| uhg87-888-a11. | Usa-Maryland   | Hotel Five | 5         | 5       | 3        | $116  |
- | uhg87-88-a11.  | Usa-Maryland  |  Hotel Six | 2         | 4       | 1        | $225  |
