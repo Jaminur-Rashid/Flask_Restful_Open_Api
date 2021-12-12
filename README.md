@@ -10,14 +10,11 @@ from the Swagger UI. Data is sorted in ascending order of bedrooms.
 
 # Prerequisites
 * Mysql
+* Mysql Connector
 * Python 3
 * pip
 * Previous project database(vrboDatabase)
 
-To install mysql connector run -
-``` 
-sudo apt-get install python3-mysql.connector
-```
 
 # How the run the application
 To run the application at first we have to install all the dependencies of the project

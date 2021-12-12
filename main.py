@@ -83,17 +83,16 @@ def house():
     cursor = db_connector.cursor()
     data_container = []
     if title != None:
+        # check whether data_fetch_query is equal to check or not
         if data_fetch_query is check:
             data_fetch_query += " Hotel_Name LIKE" + f"'%{title}%'"
         else:
             data_fetch_query += " AND Hotel_Name LIKE" + f"'%{title}%'"
-
     if bedroom != None:
         if data_fetch_query is check:
             data_fetch_query += " Bedroom >="+bedroom+""
         else:
             data_fetch_query += " AND Bedroom >="+bedroom+""
-
     if bathroom != None:
             if data_fetch_query is check:
                 data_fetch_query += " Bathroom >="+bathroom+""
@@ -138,13 +137,12 @@ def house():
     # Sort hotel data by num of Slepping room in Ascending order
     # Sort is done by using string comparison
     # as our database column name was varchar type
+
     data_container.sort(key=operator.itemgetter('Bedrooms'))
-    #d = sorted(data_container, key=lambda tmp: tmp['Sleeps'])
+    # d = sorted(data_container, key=lambda tmp: tmp['Sleeps'])
     # format data into json
     hotel_data_json = json.dumps(data_container, indent=4)
-    #print(condo)
     print(hotel_data_json)
-    print(data_fetch_query)
     return hotel_data_json
 
 
@@ -153,8 +151,6 @@ def house():
 @app.route('/swaggerPage')
 @token_required
 def swagger():
-    # return jsonify({'message': 'Only available to people with valid tokens.'})
-
     return redirect("http://127.0.0.1:5000/swagger", code=302)
 
 
@@ -171,6 +167,6 @@ def login():
 
     return make_response('Could not verify!', 401, {'WWW-Authenticate': 'Basic realm:"Login Required"'})
 
-
+# Main function
 if __name__ == "__main__":
     app.run()
