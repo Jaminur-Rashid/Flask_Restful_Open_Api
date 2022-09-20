@@ -1,9 +1,3 @@
-#################################################################
-# This is Restful Open Api using flask and Jwt                   #
-# Which can search data from database using multiple properties  #
-# Author : Jaminur Rashid                                        #
-# Date   : 9-12-2021                                             #
-# #################################################################
 from flask import Flask, jsonify, request, make_response, redirect
 import jwt
 import datetime
